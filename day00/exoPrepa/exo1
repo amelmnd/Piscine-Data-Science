@@ -1,0 +1,5 @@
+{
+	depart_time,ville,colis,poids_kg,livreur_id,suivi,express
+
+	2024-05-02 08:15:00 UTC,Lyon,3,12.75,9081,f47ac10b-58cc-4372-a567-0e02b2c3d479,true
+}
