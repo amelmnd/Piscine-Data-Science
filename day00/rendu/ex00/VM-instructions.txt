@@ -1,0 +1,27 @@
+Environnement : Ubuntu 24.04 (VM VirtualBox), PostgreSQL 16.
+
+1. Installer PostgreSQL
+sudo apt update
+sudo apt install -y postgresql postgresql-contrib
+
+2. Démarrer le service (et le lancer au démarrage)
+sudo systemctl enable --now postgresql
+sudo systemctl status postgresql
+
+3. Créer l'utilisateur
+sudo -u postgres psql
+
+CREATE ROLE amennad WITH LOGIN PASSWORD 'mysecretpassword';
+ALTER ROLE amennad SUPERUSER;
+
+4. Créer la base
+CREATE DATABASE piscineds OWNER amennad;
+
+\q
+
+5. Tester la connexion
+psql -U amennad -d piscineds -h localhost -W
+
+Mot de passe : mysecretpassword
+
+Résultat attendu : piscineds=#
