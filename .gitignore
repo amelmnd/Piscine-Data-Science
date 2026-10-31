@@ -1,0 +1,18 @@
+# Dossiers docs (partout dans le projet)
+docs/
+**/docs/
+
+# Données du sujet (CSV lourds)
+*.csv
+subject/
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Système / éditeur
+.DS_Store
+.vscode/
